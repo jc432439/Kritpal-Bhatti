@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CossiePlay</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "red";
+		}
+	}
+	
+	function nav_li_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "red";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+</head>
+
+<body onLoad="run_first()">
+<div id="wrapper">
+<header>
+<section id="topimage">
+<img src="images/CossiePlay logo1.1.png" > 
+</section>
+<nav>
+<ul>
+<li><a href="index.html" id="0" onClick="nav_li_selected(0)">Home</a></li>
+                <li><a href="AboutUs.html" id="1" onClick="nav_li_selected(1)">About Us</a></li>
+                <li><a href="Products.html" id="2" onClick="nav_li_selected(2)">Our Products</a></li>
+                <li><a href="guidelines.html" id="3" onClick="nav_li_selected(3)">Guidelines</a></li>
+                <li><a href="contact.html" id="4" onClick="nav_li_selected(4)">Contact Us</a></li>
+                <li><a href="Signup.html" id="5" onClick="nav_li_selected(5)">SignUp</a></li>
+</ul>
+</nav>
+</header>
+<section id="col4">
+<h2>Signup</h2>
+<p>
+We are pleased to announce that now you can easily register to attend the party. All you need to do is to simply write a mail to us at <strong><i>cossieplay@gmail.com and mention the following details:-</i></strong>
+<br>
+<li>Contact Name</li>
+<li>Contact Number</li>
+<li>Number of people attending the event</li>
+<br>
+<p> For further information check us out at <a href="https://en.wikipedia.org/wiki/Cosplay">https://en.wikipedia.org/wiki/Cosplay</a> 
+<br> <a href="http://www.cosplay.com">http://www.cosplay.com</a> </p>
+ 
+</p>
+</section>
+<section id="col5" align="center">
+	<img src="images/book-fair-678264_1280.jpg" alt="Sign-up" width="1200" height="480">
+</section>
+
+<footer>
+<h3>Design By Kritpal Bhatti</h3></footer>
+</div>
+</body>
+</html>

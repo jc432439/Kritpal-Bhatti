@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CossiePlay</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "red";
+		}
+	}
+	
+	function nav_li_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "red";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+</head>
+
+<body onLoad="run_first()">
+<div id="wrapper">
+<header>
+<section id="topimage">
+<img src="images/CossiePlay logo1.1.png" > 
+</section>
+<nav>
+<ul>
+<li><a href="index.html" id="0" onClick="nav_li_selected(0)">Home</a></li>
+                <li><a href="AboutUs.html" id="1" onClick="nav_li_selected(1)">About Us</a></li>
+                <li><a href="Products.html" id="2" onClick="nav_li_selected(2)">Our Products</a></li>
+                <li><a href="guidelines.html" id="3" onClick="nav_li_selected(3)">Guidelines</a></li>
+                <li><a href="contact.html" id="4" onClick="nav_li_selected(4)">Contact Us</a></li>
+                <li><a href="Signup.html" id="5" onClick="nav_li_selected(5)">SignUp</a></li>
+</ul>
+</nav>
+</header>
+<section id="col1">
+<h2>Welcome Users!!!</h2>
+<p>
+Thanks for visiting our page. You can get all the relevant information regarding the forthcoming events and parties from our site and can also get to know the various dresses available with us. Navigate through our user friendly menus to know more. 
+
+</p>
+</section>
+<section id="col2">
+<h2>Events!!</h2>
+<p>
+We are pleased to announce that on the first Saturday of every month we organise a <strong>CossiePlay Party</strong> at te Town Hall. <br><br>Entry is paid and is <strong>$15 for Adults</strong> whereas it is <strong>$10 for ages 6-17</strong> while children <strong>under 6 are <i>free!!!!</i></strong> 
+
+</p>
+</section>
+<section id="col3">
+<h2>Deals!!</h2>
+<p>
+Dont miss the awesome deals this month.<br><li>Three drinks at price of two from the bar.</li>
+<li><strong>50% discount</strong>for the new members.</li>
+<li>Free entry to all the members who wear costumes designed by us.</li> 
+<li>Get free drink and a 21-piece bucket @ KFC on Stanton <strong>(only if dressed in costume)</strong></li></p>
+
+</section>
+<footer>
+<h3>Design By Kritpal Bhatti</h3></footer>
+</div>
+</body>
+</html>
